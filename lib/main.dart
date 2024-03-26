@@ -1,19 +1,53 @@
-import 'dart:developer';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:zohodesk_portal_apikit/common/ZDPortalAPIKitConstants.dart' show ZDPDataCenter;
 import 'package:zohodesk_portal_apikit/zohodesk_portal_apikit.dart' show ZohodeskPortalApikit;
+import 'package:zohodesk_portal_configuration/zohodesk_portal_configuration.dart' show ZohodeskPortalConfiguration;
 import 'app_home_screen.dart';
 
-void main() {
-  runApp(const FlutterDemoApp());
+Future<void> main() async {
+
+    // setUpPushNotification(); // Setting Up The Push Notification
+    runApp(const FlutterDemoApp());
+}
+
+Future<void> setUpPushNotification() async {
+    await Firebase.initializeApp();
+
+    NotificationSettings settings = await FirebaseMessaging.instance.requestPermission(
+        alert: true,
+        badge: true,
+        provisional: false,
+        sound: true,
+    );
+
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+
+        FirebaseMessaging.onBackgroundMessage(notificationHandler);
+
+        FirebaseMessaging.instance.onTokenRefresh.listen(setTokenAndEnablePushNotification);
+        String? token = await FirebaseMessaging.instance.getToken();
+
+        setTokenAndEnablePushNotification(token);
+    }
+}
+
+Future<void> notificationHandler(RemoteMessage message) async { // Call this method to handle the push notification
+    ZohodeskPortalConfiguration.handleNotification(message.data);
+}
+
+Future<void> setTokenAndEnablePushNotification(String? fcmToken) async { // Call this method to enable push notification for android
+    if(fcmToken != null){
+        ZohodeskPortalApikit.enablePush(fcmToken);
+    }
 }
 
 class FlutterDemoApp extends StatefulWidget {
-  const FlutterDemoApp({super.key});
+    const FlutterDemoApp({super.key});
 
-  @override
-  State<FlutterDemoApp> createState() => _App();
+    @override
+    State<FlutterDemoApp> createState() => _App();
 
 }
 
@@ -35,10 +69,8 @@ class _App extends State<FlutterDemoApp>{
             "Jwt Token",
             (isSuccess){
                 if(isSuccess){
-                    log("isSuccess");
                     //User Authenticated Successfully
                 }else{
-                    log("fail");
                     //User Authentication Failed
                 }
             }
@@ -88,5 +120,3 @@ class _App extends State<FlutterDemoApp>{
     }
 
 }
-
-

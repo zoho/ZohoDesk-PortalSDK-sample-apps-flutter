@@ -7,20 +7,41 @@ import ZohoDeskPortalConfiguration
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-  override func application(
+    override func application(
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-  ) -> Bool {
-      GeneratedPluginRegistrant.register(with: self)
-      
-     ZDPThemeManager.updateLightTheme(theme: ThemeColors.shared)
-     ZDPThemeManager.updateDarkTheme(theme: ThemeColorsDark.shared)
-    
-      return super.application(application, didFinishLaunchingWithOptions: launchOptions)
-  }
+    ) -> Bool {
+
+        enablePushNotifications(application)
+        GeneratedPluginRegistrant.register(with: self)
+
+        ZDPThemeManager.updateLightTheme(theme: ThemeColors.shared) // Updating the Light Theme Colours
+        ZDPThemeManager.updateDarkTheme(theme: ThemeColorsDark.shared) // Updating the Dark Theme Colours
+
+        return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+
+    // Refer this method for enabling push notification
+    override func application(_ application: UIApplication,didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let token = deviceToken.reduce("", {$0 + String(format: "%02X", $1)}).uppercased()
+        ZohoDeskPortalKit.enablePushNotifications(deviceToken: token, mode: .sandbox)
+    }
+
+    // Refer this method for handling the received push notification
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        ZDPortalConfiguration.processRemoteNotification(userInfo: response.notification.request.content.userInfo)
+        completionHandler()
+    }
+
+    func enablePushNotifications(_ application: UIApplication){
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .alert, .sound]) { (_, _) in }
+        application.registerForRemoteNotifications()
+    }
+
 }
 
-class ThemeColors: ZDPThemeProtocol {
+class ThemeColors: ZDPThemeProtocol { // Define your Light Mode Theme Here
     
     private init() {}
     
@@ -38,7 +59,7 @@ class ThemeColors: ZDPThemeProtocol {
     @Published var themeColorString: String = "#673AB7"
 }
 
-class ThemeColorsDark: ZDPThemeProtocol {
+class ThemeColorsDark: ZDPThemeProtocol { // Define your Dark Mode Theme Here
     
     private init() {}
     
