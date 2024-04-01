@@ -1,0 +1,323 @@
+PODS:
+  - Firebase/CoreOnly (10.22.0):
+    - FirebaseCore (= 10.22.0)
+  - Firebase/Messaging (10.22.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 10.22.0)
+  - firebase_core (2.27.1):
+    - Firebase/CoreOnly (= 10.22.0)
+    - Flutter
+  - firebase_messaging (14.7.20):
+    - Firebase/Messaging (= 10.22.0)
+    - firebase_core
+    - Flutter
+  - FirebaseCore (10.22.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GoogleUtilities/Logger (~> 7.12)
+  - FirebaseCoreInternal (10.23.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseInstallations (10.23.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseMessaging (10.22.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.8)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/Reachability (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - Flutter (1.0.0)
+  - GoogleDataTransport (9.4.1):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/AppDelegateSwizzler (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (7.13.0):
+    - GoogleUtilities/Privacy
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/Logger (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (7.13.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.13.0)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (7.13.0)
+  - GoogleUtilities/Reachability (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/UserDefaults (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - Mobilisten (8.0.2)
+  - nanopb (2.30910.0):
+    - nanopb/decode (= 2.30910.0)
+    - nanopb/encode (= 2.30910.0)
+  - nanopb/decode (2.30910.0)
+  - nanopb/encode (2.30910.0)
+  - PromisesObjC (2.4.0)
+  - SwiftProtobuf (1.19.0)
+  - ZDChat (2.3.8):
+    - ZDHelperKit (= 1.0.1)
+    - ZDMediaPickerSDK (= 1.0.6)
+  - ZDHelperKit (1.0.1)
+  - ZDMediaPickerSDK (1.0.6)
+  - ZDThemeKit (1.3)
+  - zohodesk_portal_apikit (1.1.0):
+    - Flutter
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+  - zohodesk_portal_chat (1.1.0):
+    - Flutter
+    - ZohoDeskPortalChat (= 3.0.6)
+  - zohodesk_portal_community (1.1.0):
+    - Flutter
+    - ZohoDeskPortalCommunity (= 3.0.6)
+  - zohodesk_portal_configuration (1.1.0):
+    - Flutter
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+  - zohodesk_portal_core (1.1.0):
+    - Flutter
+    - ZohoDeskPortalCore (= 3.0.6)
+  - zohodesk_portal_gc (1.1.0):
+    - Flutter
+    - ZohoDeskPortalLiveChat (= 3.0.6)
+  - zohodesk_portal_kb (1.1.0):
+    - Flutter
+    - ZohoDeskPortalKB (= 3.0.6)
+  - zohodesk_portal_services (1.1.0):
+    - Flutter
+    - ZohoDeskPortalServices (= 3.0.6)
+  - zohodesk_portal_submit_ticket (1.1.0):
+    - Flutter
+    - ZohoDeskPortalTicket (= 3.0.6)
+  - zohodesk_portal_ticket (1.1.0):
+    - Flutter
+    - ZohoDeskPortalTicket (= 3.0.6)
+  - ZohoDeskPlatformDataBridge (1.0.12)
+  - ZohoDeskPlatformUIKit (1.0.12):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+  - ZohoDeskPortalAPIKit (3.0.6)
+  - ZohoDeskPortalChat (3.0.6):
+    - Mobilisten (= 8.0.2)
+    - SwiftProtobuf (= 1.19.0)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+  - ZohoDeskPortalCommunity (3.0.6):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+  - ZohoDeskPortalConfiguration (3.0.6):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+  - ZohoDeskPortalCore (3.0.6):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDChat (= 2.3.8)
+    - ZDHelperKit (= 1.0.1)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZDThemeKit (= 1.3)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalCommunity (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+    - ZohoDeskPortalKB (= 3.0.6)
+    - ZohoDeskPortalLiveChat (= 3.0.6)
+    - ZohoDeskPortalTicket (= 3.0.6)
+    - ZohoGCSDK (= 1.1.1)
+    - ZohoPubSubSDK (= 1.2.7)
+  - ZohoDeskPortalKB (3.0.6):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+  - ZohoDeskPortalLiveChat (3.0.6):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDChat (= 2.3.8)
+    - ZDHelperKit (= 1.0.1)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZDThemeKit (= 1.3)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+    - ZohoGCSDK (= 1.1.1)
+    - ZohoPubSubSDK (= 1.2.7)
+  - ZohoDeskPortalServices (3.0.6):
+    - Mobilisten (= 8.0.2)
+    - SwiftProtobuf (= 1.19.0)
+    - ZDChat (= 2.3.8)
+    - ZDHelperKit (= 1.0.1)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZDThemeKit (= 1.3)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalChat (= 3.0.6)
+    - ZohoDeskPortalCommunity (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+    - ZohoDeskPortalCore (= 3.0.6)
+    - ZohoDeskPortalKB (= 3.0.6)
+    - ZohoDeskPortalLiveChat (= 3.0.6)
+    - ZohoDeskPortalTicket (= 3.0.6)
+    - ZohoGCSDK (= 1.1.1)
+    - ZohoPubSubSDK (= 1.2.7)
+  - ZohoDeskPortalTicket (3.0.6):
+    - SwiftProtobuf (= 1.19.0)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZohoDeskPlatformDataBridge (= 1.0.12)
+    - ZohoDeskPlatformUIKit (= 1.0.12)
+    - ZohoDeskPortalAPIKit (= 3.0.6)
+    - ZohoDeskPortalConfiguration (= 3.0.6)
+  - ZohoGCSDK (1.1.1):
+    - ZDChat (= 2.3.8)
+    - ZDHelperKit (= 1.0.1)
+    - ZDMediaPickerSDK (= 1.0.6)
+    - ZDThemeKit (= 1.3)
+    - ZohoPubSubSDK (= 1.2.7)
+  - ZohoPubSubSDK (1.2.7)
+
+DEPENDENCIES:
+  - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
+  - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
+  - Flutter (from `Flutter`)
+  - zohodesk_portal_apikit (from `.symlinks/plugins/zohodesk_portal_apikit/ios`)
+  - zohodesk_portal_chat (from `.symlinks/plugins/zohodesk_portal_chat/ios`)
+  - zohodesk_portal_community (from `.symlinks/plugins/zohodesk_portal_community/ios`)
+  - zohodesk_portal_configuration (from `.symlinks/plugins/zohodesk_portal_configuration/ios`)
+  - zohodesk_portal_core (from `.symlinks/plugins/zohodesk_portal_core/ios`)
+  - zohodesk_portal_gc (from `.symlinks/plugins/zohodesk_portal_gc/ios`)
+  - zohodesk_portal_kb (from `.symlinks/plugins/zohodesk_portal_kb/ios`)
+  - zohodesk_portal_services (from `.symlinks/plugins/zohodesk_portal_services/ios`)
+  - zohodesk_portal_submit_ticket (from `.symlinks/plugins/zohodesk_portal_submit_ticket/ios`)
+  - zohodesk_portal_ticket (from `.symlinks/plugins/zohodesk_portal_ticket/ios`)
+
+SPEC REPOS:
+  trunk:
+    - Firebase
+    - FirebaseCore
+    - FirebaseCoreInternal
+    - FirebaseInstallations
+    - FirebaseMessaging
+    - GoogleDataTransport
+    - GoogleUtilities
+    - Mobilisten
+    - nanopb
+    - PromisesObjC
+    - SwiftProtobuf
+    - ZDChat
+    - ZDHelperKit
+    - ZDMediaPickerSDK
+    - ZDThemeKit
+    - ZohoDeskPlatformDataBridge
+    - ZohoDeskPlatformUIKit
+    - ZohoDeskPortalAPIKit
+    - ZohoDeskPortalChat
+    - ZohoDeskPortalCommunity
+    - ZohoDeskPortalConfiguration
+    - ZohoDeskPortalCore
+    - ZohoDeskPortalKB
+    - ZohoDeskPortalLiveChat
+    - ZohoDeskPortalServices
+    - ZohoDeskPortalTicket
+    - ZohoGCSDK
+    - ZohoPubSubSDK
+
+EXTERNAL SOURCES:
+  firebase_core:
+    :path: ".symlinks/plugins/firebase_core/ios"
+  firebase_messaging:
+    :path: ".symlinks/plugins/firebase_messaging/ios"
+  Flutter:
+    :path: Flutter
+  zohodesk_portal_apikit:
+    :path: ".symlinks/plugins/zohodesk_portal_apikit/ios"
+  zohodesk_portal_chat:
+    :path: ".symlinks/plugins/zohodesk_portal_chat/ios"
+  zohodesk_portal_community:
+    :path: ".symlinks/plugins/zohodesk_portal_community/ios"
+  zohodesk_portal_configuration:
+    :path: ".symlinks/plugins/zohodesk_portal_configuration/ios"
+  zohodesk_portal_core:
+    :path: ".symlinks/plugins/zohodesk_portal_core/ios"
+  zohodesk_portal_gc:
+    :path: ".symlinks/plugins/zohodesk_portal_gc/ios"
+  zohodesk_portal_kb:
+    :path: ".symlinks/plugins/zohodesk_portal_kb/ios"
+  zohodesk_portal_services:
+    :path: ".symlinks/plugins/zohodesk_portal_services/ios"
+  zohodesk_portal_submit_ticket:
+    :path: ".symlinks/plugins/zohodesk_portal_submit_ticket/ios"
+  zohodesk_portal_ticket:
+    :path: ".symlinks/plugins/zohodesk_portal_ticket/ios"
+
+SPEC CHECKSUMS:
+  Firebase: 797fd7297b7e1be954432743a0b3f90038e45a71
+  firebase_core: d6dfb4cb86a9ebd92464bb8736075fe967211c97
+  firebase_messaging: f97062a3a7644703ba4892859183c0a59e08d25f
+  FirebaseCore: 0326ec9b05fbed8f8716cddbf0e36894a13837f7
+  FirebaseCoreInternal: 6a292e6f0bece1243a737e81556e56e5e19282e3
+  FirebaseInstallations: 42d6ead4605d6eafb3b6683674e80e18eb6f2c35
+  FirebaseMessaging: 9f71037fd9db3376a4caa54e5a3949d1027b4b6e
+  Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
+  GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
+  Mobilisten: db0950297b7d31383db7b06ad7e7d34cf4e8b575
+  nanopb: 438bc412db1928dac798aa6fd75726007be04262
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  SwiftProtobuf: 6ef3f0e422ef90d6605ca20b21a94f6c1324d6b3
+  ZDChat: c3df19c5bec917f50d3a2d206063120a1e004153
+  ZDHelperKit: 9f9b5a2acb8f7301ea912ea792d42ec2dd7ea9c9
+  ZDMediaPickerSDK: ec9170d397cbecc9c5225132cdc004da51cd0221
+  ZDThemeKit: 91aacb32c61947dcdd5a399e0eb51c8302fbc456
+  zohodesk_portal_apikit: dd21edb3fc25466e8f039447298b45b4fce6f171
+  zohodesk_portal_chat: ea5758f517c3b794855dcc5968110dcba444c616
+  zohodesk_portal_community: bf04c40c8bbfae9234d1612a13d144b9a708b7ff
+  zohodesk_portal_configuration: f2aa269c988494be288e6e38dd66a5c488253544
+  zohodesk_portal_core: 8bfd950db60e5af9f449585e38933a12fbd3e21b
+  zohodesk_portal_gc: 9416767b7790e78d8f623e954092abb2635fc266
+  zohodesk_portal_kb: 896139e96ab7c4d89d28ef26cf49c9664e0e4cd1
+  zohodesk_portal_services: 80b06d522649ccdc9a3c5c858d61ef648d88206a
+  zohodesk_portal_submit_ticket: ac87e9e7a7f6b0fccf02524a270b8346bf79eb79
+  zohodesk_portal_ticket: 752db26cda61d57cd0dc8dca73e92f2f8489baa9
+  ZohoDeskPlatformDataBridge: b6dd6dbbc2a0b6b33fad6be56634ed62b562192e
+  ZohoDeskPlatformUIKit: a6e82a1b029b55ead3458186aeecdcf0cad052db
+  ZohoDeskPortalAPIKit: 0e65812dba117d6712c22c5a14d6a9fe5bb75c4f
+  ZohoDeskPortalChat: 2992f251195f680ad49bbd839e7aafe2294ecee5
+  ZohoDeskPortalCommunity: 03db59b5bff3a2f5bd11df92bbe494d65859e40a
+  ZohoDeskPortalConfiguration: fe82a22ed788b1f323d116faf80b62d7f912cc0a
+  ZohoDeskPortalCore: 9f6e082852131b5bae04298a97cc31bdff6c5713
+  ZohoDeskPortalKB: ee67be94d99652c8f44362323877edc24aa9398d
+  ZohoDeskPortalLiveChat: b6064b260f4623e42180524296931a05a0c610ae
+  ZohoDeskPortalServices: 60d1e78844ad5bd71d54a53dddf304022463fb3e
+  ZohoDeskPortalTicket: a1512088c9f92c5c673092253ea1747be2b69b61
+  ZohoGCSDK: 5eb6b5f628a9c709190d6109cbc6ce7c1e6a5688
+  ZohoPubSubSDK: 5034193f9b5da70dd9002bf0a958768801d1e607
+
+PODFILE CHECKSUM: 819463e6a0290f5a72f145ba7cde16e8b6ef0796
+
+COCOAPODS: 1.15.2
