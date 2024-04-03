@@ -15,9 +15,9 @@ import ZohoDeskPortalConfiguration
         enablePushNotifications(application)
         GeneratedPluginRegistrant.register(with: self)
 
-        ZDPThemeManager.updateLightTheme(theme: ThemeColors.shared) // Updating the Light Theme Colours
+        ZDPThemeManager.updateLightTheme(theme: ThemeColorsLight.shared) // Updating the Light Theme Colours
         ZDPThemeManager.updateDarkTheme(theme: ThemeColorsDark.shared) // Updating the Dark Theme Colours
-
+        ZDPortalConfiguration.modalPresentationStyle = .overFullScreen // Setting the Presentation style to occupy the full screen
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 
@@ -41,11 +41,11 @@ import ZohoDeskPortalConfiguration
 
 }
 
-class ThemeColors: ZDPThemeProtocol { // Define your Light Mode Theme Here
+class ThemeColorsLight: ZDPThemeProtocol { // Define your Light Mode Theme Here
     
     private init() {}
     
-    public static var shared: ZDPThemeProtocol = ThemeColors()
+    public static var shared: ZDPThemeProtocol = ThemeColorsLight()
     
     var navigationBarBackgroundColor: UIColor {
         UIColor(hexCode: navBarBackgroundColor)
