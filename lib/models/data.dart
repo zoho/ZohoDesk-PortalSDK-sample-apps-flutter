@@ -33,7 +33,7 @@ final List<ModuleEntity> asapGuestUserModulesList = [
         name: "Guided Conversation",
         desc: "Chat with GC Bot for more info",
         moduleInvoker: () {
-            ZDPortalGC.show();
+            ZDPortalGC.showGC();
         }
     ),
     ModuleEntity(
@@ -49,7 +49,21 @@ final List<ModuleEntity> asapGuestUserModulesList = [
         moduleInvoker: () {
             ZohodeskPortalSubmitTicket.show();
         }
-    )
+    ),
+    ModuleEntity(
+        name: "Answer Bot",
+        desc: "Ask the bot your queries",
+        moduleInvoker: () {
+          ZDPortalGC.showAnswerBot();
+        }
+    ),
+    ModuleEntity(
+        name: "Business Messaging",
+        desc: "Chat with agent directly",
+        moduleInvoker: () {
+          ZDPortalGC.showBM();
+        }
+    ),
 ];
 
 final List<ModuleEntity> asapLoggedUserModules = [
