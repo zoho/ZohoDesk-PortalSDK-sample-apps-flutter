@@ -5,8 +5,8 @@ import 'package:zohodesk_portal_apikit/common/ZDPortalAPIKitConstants.dart' show
 import 'package:zohodesk_portal_apikit/zohodesk_portal_apikit.dart' show ZohodeskPortalApikit;
 import 'package:zohodesk_portal_configuration/zohodesk_portal_configuration.dart' show ZohodeskPortalConfiguration;
 import 'app_home_screen.dart';
-import 'package:zohodesk_portal_gc/zohodesk_portal_gc.dart'
-    show ZDPortalGC;
+import 'package:zohodesk_portal_chatkit/zohodesk_portal_chatkit.dart'
+    show ZohodeskPortalChatKit;
 
 Future<void> main() async {
 
@@ -93,22 +93,22 @@ class _App extends State<FlutterDemoApp>{
 
     static setGuidedConversationSessionVariable() {
         List<Map<String, String>> sessionVariable = [{"name": "YOUR VARIABLE NAME", "value" : "YOUR VARIABLE VALUE"}, {"name": "YOUR VARIABLE NAME", "value": "YOUR VARIABLE VALUE" }];
-        ZDPortalGC.setGCSessionVariable(sessionVariable);
+        ZohodeskPortalChatKit.setGCSessionVariable(sessionVariable);
     }
 
     static updateGuidedConversationSessionVariable() {
         List<Map<String, String>> sessionVariable = [{"name": "YOUR VARIABLE NAME", "value" : "YOUR VARIABLE VALUE"}, {"name": "YOUR VARIABLE NAME", "value": "YOUR VARIABLE VALUE" }];
-        ZDPortalGC.updateGCSessionVariable(sessionVariable);
+        ZohodeskPortalChatKit.updateGCSessionVariable(sessionVariable);
     }
 
     static setBusinessMessagingSessionVariable() {
         List<Map<String, String>> sessionVariable = [{"name": "YOUR VARIABLE NAME", "value" : "YOUR VARIABLE VALUE"}, {"name": "YOUR VARIABLE NAME", "value": "YOUR VARIABLE VALUE" }];
-        ZDPortalGC.setBMSessionVariable(sessionVariable);
+        ZohodeskPortalChatKit.setBMSessionVariable(sessionVariable);
     }
 
     static updateBusinessMessagingSessionVariable() {
         List<Map<String, String>> sessionVariable = [{"name": "YOUR VARIABLE NAME", "value" : "YOUR VARIABLE VALUE"}, {"name": "YOUR VARIABLE NAME", "value": "YOUR VARIABLE VALUE" }];
-        ZDPortalGC.updateBMSessionVariable(sessionVariable);
+        ZohodeskPortalChatKit.updateBMSessionVariable(sessionVariable);
     }
 
     void changeTheme(){

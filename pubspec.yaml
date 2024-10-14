@@ -30,7 +30,7 @@ environment:
 dependencies:
     flutter:
         sdk: flutter
-    zohodesk_portal_services: ^2.0.0
+    zohodesk_portal_services: ^2.0.2
     firebase_messaging: ^14.7.20
     firebase_core: ^2.27.1
 
